@@ -10,7 +10,7 @@ Usage
 package main
 
 import (
-    "github.com/carterjones/go-cloudflare-scraper"
+    "github.com/pauloalves86/go-cloudflare-scraper"
 )
 
 func main() {
