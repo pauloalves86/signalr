@@ -18,8 +18,8 @@ import (
 	"time"
 
 	scraper "github.com/carterjones/go-cloudflare-scraper"
-	"github.com/pauloalves86/signalr/hubs"
 	"github.com/gorilla/websocket"
+	"github.com/pauloalves86/signalr/hubs"
 	"github.com/pkg/errors"
 )
 
@@ -594,7 +594,7 @@ func (c *Client) processReadMessagesMessage(p []byte, msgHandler MsgHandler, err
 		c.MessageID.Set(msg.C)
 	}
 
-	go msgHandler(msg)
+	msgHandler(msg)
 }
 
 func (c *Client) processReadMessagesError(err error, errHandler ErrHandler) bool {
